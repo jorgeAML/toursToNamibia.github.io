@@ -1,0 +1,153 @@
+/*
+    ACTUALIZACIONES
+        20.01.2020 The nav had changed for responsive web, colors, box-shadows.
+*/
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+/* NAVBAR */
+.navbar {
+    order: 1;
+    display: flex;
+    padding: 14px;
+    text-align: center;
+}
+.navbar_items {
+    display: flex;
+}
+.font_fredoka {
+    font-family: 'Fredoka One', cursive;
+}
+.font_cabin {
+    font-family: 'Cabin Condensed', sans-serif;;
+}
+
+/* MEDIA QUERY FOR DESKTOPS */
+@media only screen and (min-width: 1030px) {
+    .navbar-link-toggle {
+        display: none;
+    }
+    .navbar_link {
+        /* SOME HERE*/
+    }
+    .font_fredoka {
+        font-size: 1.7em;
+        padding-right: 400px;
+    }
+    .font_cabin {
+        padding-left: 60px;
+        padding-top: 10px;
+        font-size: small;
+    }
+    .navbar {
+        order: 0;
+        position: relative;
+        justify-content: center;
+    }
+    .navbar a {
+        color: 	#f2f2f2;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding: 2px 6px;
+        transition: color 5s cubic-bezier(0.11, 0.7, 0, 1);
+    }
+    .navbar a:hover {
+        color: 	#ffffff;
+    }
+    /* EFFECTS NAV */
+    .link1:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fef8a3;
+        content: '';
+        transform: scale(0);
+        -webkit-transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+        -moz-transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+        -ms-transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+        -o-transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+        transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+    }
+    .link1:hover:after {
+        transform: scale(1);
+    }
+    .link2:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ffce6f;
+        content: '';
+        transform: translate3d(-101%,0,0);
+        transition: transform 5s cubic-bezier(0.11, 0.7, 0, 1);
+    }
+    .link2:hover:after {
+        transform: translate3d(0,0,0);
+    }
+
+
+}
+/* MEDIA QUERY FOR MOBILES */
+@media only screen and (max-width: 1024px) {
+    .navbar,
+    .navbar_items {
+        flex-direction: column;
+        position: relative;
+        text-decoration: none;
+    }
+    .navbar_items {
+        display: none;
+    }
+    .navbar-toggle-show {
+        display: flex;
+    }
+    .navbar-link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: cell;
+        padding-top: 13px;
+    }
+    nav img {
+        position: absolute;
+        display: none;
+    }
+    .nav {
+        box-shadow: 0px 1px 3px 1px #550000;
+        border-bottom: solid 1.5px #912f13; 
+        background-color: #751706;
+    }
+    .navbar a {
+        text-decoration: none;
+    }
+    .link1 {
+        font-size: 2em;
+        color: #ffdbb4;
+    }
+    .link2 {
+        color: #ffdbb4;
+    }
+    body {
+        background-color: #ffd8b0;
+        /*background: rgb(246,155,142);
+        background: linear-gradient(0deg, rgba(246,155,142,1) 0%, rgba(148,190,240,1) 100%);*/
+    }
+    .navbar > .navbar_items > .navbar_link {
+        background-color: #85250f;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 8px;
+    }
+}
+
+
+

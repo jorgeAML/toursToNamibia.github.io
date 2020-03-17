@@ -1,0 +1,183 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-feb-2020, 17:01:19
+    Author     : Jorge AML
+*/
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/*after & before */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+a:before, a:after {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+}
+.container_three_info {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+}
+.row_cont_three {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.dessert1 {
+    font-family: 'Cabin Condensed', sans-serif;
+    color: #871500;
+}
+.dessert2 {
+    font-family: 'Rubik', sans-serif;
+    color: #f2f2f2;
+}
+/*
+    Created on : 03-March-2020, 10:32:00
+    Author     : Jorge AML
+*/
+.row_cont_four {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.column {
+    flex: 1;
+}
+[class^="column"] {
+    padding: 0 0.5em;
+}
+.hoja_post {
+    background-color: transparent;
+}
+.inlinediv {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+}
+.first_post_left, .first_post_center, .first_post_right {
+    background-color: transparent;
+    margin: 1px 1px;
+    padding-right: 35px;
+}
+.second_post_left, .second_post_center, .second_post_right {
+    background-color: transparent;
+    margin: 1px 1px;
+    padding-right: 15px;
+}
+.third_post_left, .third_post_center, .third_post_right {
+    background-color: transparent;
+    margin: 1px 1px;
+    /*padding-right: 15px;*/
+}
+.description_tittle {
+    color: #cdddff;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+.description_paragraf {
+    color: #eaeaea;
+    font-family: 'Baloo Tammudu 2', cursive;
+    line-height: 1px;
+}
+.special_ho {
+    font-family: 'Baloo Tammudu 2', cursive;
+    line-height: 1px;
+    color: #fffbf0;
+    overflow: hidden;
+    /*font-weight: 800;*/
+    transition: background-position 275ms ease;
+}
+.special_ho::before{
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: #fbc34a;
+    overflow: hidden;
+    transition: width 275ms ease;
+    width: 0;
+    white-space: nowrap;
+}
+.special_ho:hover::before {
+    width: 100%;
+}
+.check_availability {
+    padding: 10px
+}
+.check_availability:before, .check_availability:after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: #ecb533;
+}
+.check_availability:before {
+    border-width: 2px 0px 2px 0px;
+    transform: scaleX(0);
+}
+.check_availability:after {
+    border-width: 0px 2px 0px 2px;
+    transform: scaleY(0);
+}
+.check_availability:hover:before, .check_availability:hover:after {
+    transform: scale(1, 1);
+}
+
+/*MEDIA FOR DESKTOPS*/
+@media only screen and (min-width: 1030px) {
+    .container_three_info {
+        margin-left: 15%;
+    }
+    .ctd_info {
+        line-height: 1px;
+    }
+    .hoja_post {
+        margin-top: 3px;
+        margin-right: 0px;
+        margin-left: 15%;
+    }
+    .inlinediv {
+        position: relative;
+    }
+    .c1, .c4, .c7 {
+        order: 1;
+        flex: 1 2 auto;
+    }
+    .c2, .c5, .c8 {
+        order: 2;
+        flex: 1 2 auto;
+    }
+    .c3, .c6, .c9 {
+        order: 3;
+        flex: 1 2 auto;
+    }
+    .arrow {
+        margin-left: 10px;
+    }
+    .third_post_left, .third_post_center, .third_post_right {
+        padding: 0px 100px 0px 75px;
+    }
+}
+
